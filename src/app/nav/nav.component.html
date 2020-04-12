@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<clr-header class="header-6">
+    <div class="branding">
+        <a href="#" class="nav-link nav-text">
+            <span class="title">POST</span>
+        </a>
+    </div>
+    <div class="header-nav" [clr-nav-level]="1">
+    	<!-- <a href="./index.html" class="nav-link nav-text">Plants</a> -->
+      <a [routerLink]="['./app-plant']" class="nav-link nav-text">Plantas</a>
+    	<a [routerLink]="['./app-about']" class="nav-link nav-text">Quien Somos</a><!--About</a>-->
+    	<!--<a [routerLink]="['./installation']" class="nav-link nav-text">Installations</a>-->
+      <a [routerLink]="['./app-login']" class="pull-right nav-link nav-text ">Suscribir</a>
+      <!-- <a [routerLink]="['./my-update']" class="nav-link nav-text">Actualizar Preferencias</a> -->
+      <!-- <a id='selector' [routerLink]="['./plant-selector']" class="pull-right nav-link nav-text">Selector</a> -->
+    </div>
+</clr-header>

@@ -1,0 +1,55 @@
+<form style="border:1px solid #ccc">
+  <div class="container">
+    <h1>¡Suscribase!</h1>
+    <p>Por favor llene el formulario para recibir notificaciones de su planta</p>
+    <hr>
+
+    <label for="nme"><b>Nombre</b></label>
+    <input type="text" placeholder="Nombre" name="nme" required>
+
+    <label for="email"><b>Correo Electrónico</b></label>
+    <input type="text" placeholder="Correo Electrónico" name="email" required>
+
+    <label for="psw"><b>Contraseña</b></label>
+    <input type="password" placeholder="Contraseña" name="psw" required>
+
+    <label for="psw-repeat"><b>Repita su Contraseña</b></label>
+    <input type="password" placeholder="Contraseña Repetida" name="psw-repeat" required>
+
+    <p>Si prefiere recibir mensajes de Facebook, escriba su nombre de usuario para Facebook</p>
+    <hr>
+
+    <label for="msg-id"><b> Facebook Nombre de Usuario</b></label>
+    <input type="text" placeholder="Nombre de Usuario" name="msg-id" required>
+
+    <p>Por favor seleccione la(s) planta(s) cuyos datos quiere recibir</p>
+    <hr>
+
+    <form id="selectorForm">
+      <input type="checkbox" class="plant" id="Agalteca" value="Agalteca"> Agalteca<br>
+      <input type="checkbox" class="plant" id="Alauca" value="Alauca"> Alauca<br>
+      <input type="checkbox" class="plant" id="Atima" value="Atima"> Atima<br>
+      <input type="checkbox" class="plant" id="Cuatro Comunidades" value="Cuatro Comunidades"> Cuatro Comunidades<br>
+      <input type="checkbox" class="plant" id="Otoro" value="Otoro"> Otoro<br>
+      <input type="checkbox" class="plant" id="Marcala" value="Marcala"> Marcala<br>
+      <input type="checkbox" class="plant" id="Moroceli" value="Moroceli"> Moroceli<br>
+      <input type="checkbox" class="plant" id="Matias" value="Matias"> Matias<br>
+      <input type="checkbox" class="plant" id="San Nicolas" value="San Nicolas"> San Nicolas<br>
+      <input type="checkbox" class="plant" id="Tamara" value="Tamara"> Tamara<br>
+      <input type="checkbox" class="plant" id="Las Vegas" value="Las Vegas"> Las Vegas<br>
+      <input type="checkbox" class="plant" id="San Juan Guarita" value="San Juan Guarita"> San Juan Guarita<br>
+    <!-- Correo Electronico: <input #mail type="text" value="ejemplo@gmail.com"><br> -->
+    </form>
+    <hr>
+    <!-- <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label> -->
+
+    <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
+
+    <div class="clearfix">
+      <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+      <button (click)="addUser()"type="submit" class="signupbtn">Suscribir</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,23 @@
+<h2>{{plant}}</h2>
+<p></p>
+
+<clr-tabs>
+    <clr-tab>
+        <button clrTabLink id="link1">Gráfica</button>
+        <clr-tab-content *clrIfActive="true">
+        <app-graph></app-graph>
+        </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+        <button clrTabLink>Tabla</button>
+        <clr-tab-content *clrIfActive="false">
+          <app-table></app-table>
+        </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+        <button clrTabLink>Descargar Datos</button>
+        <clr-tab-content *clrIfActive="false">
+          <app-downloads></app-downloads>
+        </clr-tab-content>
+    </clr-tab>
+</clr-tabs>
