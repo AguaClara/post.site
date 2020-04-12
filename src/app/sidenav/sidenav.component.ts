@@ -14,7 +14,7 @@ export class SidenavComponent implements OnInit {
 
   onClickMe(plantName) {
     localStorage.setItem("plantName", plantName);
-   window.location.reload();
+   // window.location.reload();
  }
 
 }
