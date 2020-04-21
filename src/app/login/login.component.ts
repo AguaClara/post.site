@@ -12,22 +12,7 @@ require("firebase/firestore");
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router:Router){}//public auth: AuthService, private router: Router) { }
-
-  loginGoogle() {
-    // var firebase = require("firebase/app");
-    // if (firebase.auth().currentUser){
-    //   this.auth.signOut()
-    //   document.getElementById("loginout").innerHTML = "Suscribase con Gmail"
-    // } else{
-    //   this.auth.googleLogin()
-    //   if (firebase.auth().currentUser){
-    //     document.getElementById("loginout").innerHTML = "Suscribase con Gmail"
-    //   }
-    //
-    // }
-
-  }
+  constructor(private router:Router){}
 
   addUser(){
     if (!firebase.apps.length) {
@@ -36,6 +21,7 @@ export class LoginComponent implements OnInit {
     var db = firebase.firestore();
     var form = document.getElementsByTagName("FORM")[0];
     var inputs = form.getElementsByTagName("INPUT");
+    console.log(inputs);
     var nme = inputs[0]["value"];
     var mail = inputs[1]["value"];
     var pswd = inputs[2]["value"];
@@ -48,6 +34,8 @@ export class LoginComponent implements OnInit {
     var plantBoxes = plantForm.getElementsByTagName("INPUT");
     var plnts = [];
 
+    console.log(mail);
+    console.log(mID)
 
     // fill plants with the checked plants
     for (let plant of Array.from(plantBoxes)){
@@ -56,19 +44,25 @@ export class LoginComponent implements OnInit {
       }
     }
     if (nme==""){
-      alert("Usted necesita dar su nombre para suscribirse.");
+      alert("Usted necesita entrar su nombre para suscribirse.");
       return;
     }
-    var docID = ""
-    if (mail==""){
-      docID = mID;
-    }else{
-      docID = mail;
-    }
-    if (docID == ""){
-      alert("Usted necesita dar o una dirección de correo electronico o su nombre de usuario de Facebook.");
+
+    if (mID == ""){
+      alert("Usted necesita entrar un correo electronico.");
       return;
     }
+
+    var docID = mID;//""
+    // if (mail==""){
+    //   docID = mID;
+    // }else{
+    //   docID = mail;
+    // }
+    // if (docID == ""){
+    //   alert("Usted necesita dar o una dirección de correo electronico o su nombre de usuario de Facebook.");
+    //   return;
+    // }
 
     if(pswd==""){
       alert("Usted necesita usar una contraseña para suscribirse.");
@@ -89,10 +83,11 @@ export class LoginComponent implements OnInit {
     .then(function(docRef) {
         console.log("Document written with ID: ", docID);
     }).then(()=>{
+      console.log("Success")
       this.router.navigate(['app-subscribed'])
     }).catch(function(error) {
-        console.error("Error adding document: ", error);
-        alert("Hubo un error. Intente de nuevo más tarde.")
+      console.error("Error adding document: ", error);
+      alert("Hubo un error. Intente de nuevo más tarde.")
     });
     return;
   }
