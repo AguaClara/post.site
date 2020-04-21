@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    if (mID == ""){
+    if (mail == ""){
       alert("Usted necesita entrar un correo electronico.");
       return;
     }
