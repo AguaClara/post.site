@@ -43,17 +43,17 @@ export class LoginComponent implements OnInit {
         plnts.push((<HTMLInputElement>plant).value)
       }
     }
-    if (nme==""){
-      alert("Usted necesita entrar su nombre para suscribirse.");
-      return;
-    }
+    // if (nme==""){
+    //   alert("Usted necesita entrar su nombre para suscribirse.");
+    //   return;
+    // }
 
-    if (mail == ""){
-      alert("Usted necesita entrar un correo electronico.");
-      return;
-    }
+    // if (mail == ""){
+    //   alert("Usted necesita entrar un correo electronico.");
+    //   return;
+    // }
 
-    var docID = mID;//""
+    var docID = mail;//""
     // if (mail==""){
     //   docID = mID;
     // }else{
