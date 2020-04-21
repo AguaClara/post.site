@@ -14,11 +14,14 @@ export class LoginComponent implements OnInit {
 
   constructor(private router:Router){}
 
-  addUser(){
+  write(){
+
     if (!firebase.apps.length) {
         firebase.initializeApp(environment.firebaseConfig);
     }
     var db = firebase.firestore();
+    console.log(db);
+
     var form = document.getElementsByTagName("FORM")[0];
     var inputs = form.getElementsByTagName("INPUT");
     console.log(inputs);
@@ -27,15 +30,14 @@ export class LoginComponent implements OnInit {
     var pswd = inputs[2]["value"];
     if (pswd != inputs[3]["value"]){
       alert("Las contraseñas son diferentes. Tienen que ser iguales.");
-      return;
+      return false;
     }
     var mID = inputs[4]["value"];
     var plantForm = document.getElementsByTagName("FORM")[1];
     var plantBoxes = plantForm.getElementsByTagName("INPUT");
     var plnts = [];
 
-    console.log(mail);
-    console.log(mID)
+
 
     // fill plants with the checked plants
     for (let plant of Array.from(plantBoxes)){
@@ -43,53 +45,44 @@ export class LoginComponent implements OnInit {
         plnts.push((<HTMLInputElement>plant).value)
       }
     }
-    // if (nme==""){
-    //   alert("Usted necesita entrar su nombre para suscribirse.");
-    //   return;
-    // }
 
-    // if (mail == ""){
-    //   alert("Usted necesita entrar un correo electronico.");
-    //   return;
-    // }
-
-    var docID = mail;//""
-    // if (mail==""){
-    //   docID = mID;
-    // }else{
-    //   docID = mail;
-    // }
-    // if (docID == ""){
-    //   alert("Usted necesita dar o una dirección de correo electronico o su nombre de usuario de Facebook.");
-    //   return;
-    // }
+    var docID = mail;
+    if (docID == ""){
+      alert("Se necesita un correo electronico.");
+      return false;
+    }
 
     if(pswd==""){
       alert("Usted necesita usar una contraseña para suscribirse.");
-      return;
+      return false;
     }
 
     if (plnts.length == 0){
       alert("Usted necesita seleccionar una planta.");
-      return;
+      return false;
     }
-    db.collection("users").doc(docID).set({
+
+
+    // db.collection("users").add({
+    //     name: nme,
+    //     email: mail,
+    //     password: pswd,
+    //     messengerID: mID,
+    //     plants: plnts
+    // })
+    db.collection("users").doc(mail).set({
         name: nme,
         email: mail,
         password: pswd,
         messengerID: mID,
         plants: plnts
     })
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docID);
-    }).then(()=>{
-      console.log("Success")
+    .then(()=>{
+      console.log("Navigating")
       this.router.navigate(['app-subscribed'])
-    }).catch(function(error) {
-      console.error("Error adding document: ", error);
-      alert("Hubo un error. Intente de nuevo más tarde.")
     });
-    return;
+    return false;
+
   }
 
   ngOnInit(): void {
