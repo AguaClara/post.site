@@ -129,7 +129,7 @@ export class GraphComponent implements OnInit {
                 }
               }
             },
-            maintainAspectRatio: true,
+            maintainAspectRatio: false,
             legend: {
               display: true,
               position: 'right',
