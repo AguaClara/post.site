@@ -32,8 +32,7 @@ export class GraphComponent implements OnInit {
 
       var db = firebase.database();
       var plant = localStorage.getItem("plantName").replace(/ /g, "");
-      console.log("plant => ", plant);
-      const ref = db.ref(plant);
+
       var self = this;
       var x1 = new Array();
       var y1 = new Array();
@@ -41,6 +40,8 @@ export class GraphComponent implements OnInit {
       var y3 = new Array();
       var y4 = new Array();
       var y5 = new Array();
+
+      const ref = db.ref(plant);
 
       ref.limitToLast(20).on('value', function(snapshot) {
         var nodeData;
