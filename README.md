@@ -1,4 +1,39 @@
-# SampleApp
+# POST 
+
+### Team Members: 
+Joseph Ugarte (Subteam lead),
+Kelly Tran,
+Andrés Guillermo Mayorga Corleto
+
+### Goals for Fall 2022:
+1. New member onboarding
+2. Generate set of questions to ask Agua Para el Pueblo (APP)
+3. Draft presentation to present to APP and draft models of google forms and sheets to demonstrate a new way of collecting data
+4. Explore KoboToolBox
+5. Understand plant operator perspectives by creating and distributing surveys to plant operators
+
+### Calendar:
+Lab times/meetings assigned to Tuesday @ 1:30-2:30 PM and Thursday @ 1:00-2:30 PM along with time put in outside of lab.
+
+Week 1: New member onboarding + creating questions for meetings with Monroe and APP
+
+Week 2: Drafting models for new google forms and sheets proposal
+
+Week 3-5: Preparing presentation for APP
+
+Week 6: Prep for the Symposium.
+
+Week 7: TBD
+
+Week 8-9: TBD 
+
+Week 10: TBD
+
+Week 11: TBD
+
+Week 12: TBD
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
 
