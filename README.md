@@ -1,11 +1,11 @@
-# POST 
+# POST
 
 ### Team Members: 
-Joseph Ugarte (Subteam lead),
-Kelly Tran,
-Andrés Guillermo Mayorga Corleto
+Kelly Tran (Subteam lead),
+Abby Kim,
+Tim Holt
 
-### Goals for Fall 2022:
+### Goals for Spring 2023:
 1. New member onboarding
 2. Generate set of questions to ask Agua Para el Pueblo (APP)
 3. Draft presentation to present to APP and draft models of google forms and sheets to demonstrate a new way of collecting data
