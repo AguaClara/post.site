@@ -1,10 +1,10 @@
 # POST
 
 ### Team Members: 
-Kelly Tran | Subteam lead | kt457@cornell.edu
-Abby Kim | sk2459@cornell.edu
-Tim Holt | tch83@cornell.edu  
-George Dong | gd289@cornell.edu  
+Kelly Tran | Subteam lead | kt457@cornell.edu  
+Abby Kim | sk2459@cornell.edu  
+Tim Holt | tch83@cornell.edu    
+George Dong | gd289@cornell.edu    
 Contact us if you have any questions or recommendations!
 
 ### Goals for Spring 2023:
