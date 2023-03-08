@@ -14,10 +14,10 @@ Contact us if you have any questions or recommendations!
 4. Receive data from product and improve upon product based on plant operator feedback
 5. Visualize data received using Tableau and displaying the visualizations on our website
 
-### Calendar: 
-Weekly meeting times are: 
-1. Mondays 6:00PM-7:30PM -> (switching to) Wednesdays 4:30PM-6:00PM (starting 03/03/23) @ Duffield Hall
-2. Saturdays 12:00PM-1:30PM @ Libe Cafe
+### Calendar:  
+Weekly meeting times are:  
+1. Wednesdays 6:00PM-7:15PM (starting 03/03/23) @ Duffield Hall  
+2. Saturdays 12:00PM-1:30PM @ Libe Cafe  
 
 Weekly agenda and meeting notes can be found at: 
 https://docs.google.com/presentation/d/1ViO0ekPH1wgRPzq8dw5BxooEX-SGiBn7aWjQFiuPi_Q/edit?usp=sharing
